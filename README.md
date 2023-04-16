@@ -1,10 +1,13 @@
 # PicoTelegraphDisplay
 A small display unit for a keyboard input. It is specifically designed to pair with the PicoTelegraphKey Repo. 
 
-## Getting started
-1. Install Thonny: `sudo apt install thonny`
-2. Run thonny as admin: `sudo thonny`
-3. Connect the Pico while holding BOOTSEL button
-4. If needed select and/or install MicroPython for the Pico by using the language selector at the bottom left of the thonny window
-5. Start coding or save files to the pico using thonny
-   > note: 'main.py' will run automatically
+## Getting started Development
+1. Install Pico C SDK
+  1. `mkdir pico-sdk`
+  2. `cd pico-sdk`
+  3. `git clone https://github.com/raspberrypi/pico-sdk.git`
+  4. `git submodule update --init`
+  5. `cd ..`
+2. Install Toolset
+  1. `sudo apt update`
+  2. `sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential`
