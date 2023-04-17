@@ -40,6 +40,8 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/user/git/PicoTelegraphDisplay/DisplayProject/build/pico-sdk/cmake_install.cmake")
+  include("/home/user/git/PicoTelegraphDisplay/DisplayProject/build/lib/Config/cmake_install.cmake")
+  include("/home/user/git/PicoTelegraphDisplay/DisplayProject/build/lib/OLED/cmake_install.cmake")
 
 endif()
 

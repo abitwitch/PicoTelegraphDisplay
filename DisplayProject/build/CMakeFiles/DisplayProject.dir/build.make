@@ -702,6 +702,48 @@ CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c -o CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 
+CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: CMakeFiles/DisplayProject.dir/flags.make
+CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c
+CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: CMakeFiles/DisplayProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/git/PicoTelegraphDisplay/DisplayProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj -MF CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj.d -o CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj -c /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c
+
+CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c > CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
+
+CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c -o CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
+
+CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj: CMakeFiles/DisplayProject.dir/flags.make
+CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj: /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c
+CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj: CMakeFiles/DisplayProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/git/PicoTelegraphDisplay/DisplayProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj -MF CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj.d -o CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj -c /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c
+
+CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c > CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+
+CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c -o CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
+
+CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: CMakeFiles/DisplayProject.dir/flags.make
+CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c
+CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: CMakeFiles/DisplayProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/git/PicoTelegraphDisplay/DisplayProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj -MF CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj.d -o CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj -c /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c
+
+CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c > CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+
+CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c -o CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+
 # Object files for target DisplayProject
 DisplayProject_OBJECTS = \
 "CMakeFiles/DisplayProject.dir/DisplayProject.c.obj" \
@@ -749,7 +791,10 @@ DisplayProject_OBJECTS = \
 "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj" \
 "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj" \
 "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj" \
-"CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj"
+"CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj" \
+"CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj" \
+"CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj" \
+"CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj"
 
 # External object files for target DisplayProject
 DisplayProject_EXTERNAL_OBJECTS =
@@ -800,10 +845,15 @@ DisplayProject.elf: CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDis
 DisplayProject.elf: CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 DisplayProject.elf: CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 DisplayProject.elf: CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+DisplayProject.elf: CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+DisplayProject.elf: CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+DisplayProject.elf: CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
 DisplayProject.elf: CMakeFiles/DisplayProject.dir/build.make
+DisplayProject.elf: lib/OLED/libOLED.a
+DisplayProject.elf: lib/Config/libConfig.a
 DisplayProject.elf: pico-sdk/src/rp2_common/boot_stage2/bs2_default_padded_checksummed.S
 DisplayProject.elf: CMakeFiles/DisplayProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/git/PicoTelegraphDisplay/DisplayProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Linking CXX executable DisplayProject.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/git/PicoTelegraphDisplay/DisplayProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Linking CXX executable DisplayProject.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DisplayProject.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/arm-none-eabi-objcopy -Oihex /home/user/git/PicoTelegraphDisplay/DisplayProject/build/DisplayProject.elf DisplayProject.hex
 	/usr/bin/arm-none-eabi-objcopy -Obinary /home/user/git/PicoTelegraphDisplay/DisplayProject/build/DisplayProject.elf DisplayProject.bin

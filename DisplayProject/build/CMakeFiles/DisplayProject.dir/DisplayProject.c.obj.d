@@ -54,4 +54,16 @@ CMakeFiles/DisplayProject.dir/DisplayProject.c.obj: \
  /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h \
  /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
  /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
- /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h
+ /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
+ /home/user/git/PicoTelegraphDisplay/DisplayProject/lib/OLED/OLED_2in23.h \
+ /home/user/git/PicoTelegraphDisplay/DisplayProject/./lib/Config/DEV_Config.h \
+ /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/include/hardware/spi.h \
+ /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/spi.h \
+ /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h \
+ /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
+ /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
+ /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h \
+ /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_pwm/include/hardware/pwm.h \
+ /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pwm.h \
+ /home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pwm.h \
+ /home/user/git/PicoTelegraphDisplay/DisplayProject/lib/Config/DEV_Config.h

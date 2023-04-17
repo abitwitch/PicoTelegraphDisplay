@@ -67,6 +67,8 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
+  ".././lib/Config"
+  ".././lib/OLED"
   "../"
   "../.."
   "/home/user/git/PicoTelegraphDisplay/pico-sdk/src/common/pico_stdlib/include"
@@ -107,6 +109,10 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/pico_int64_ops/include"
   "/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/pico_mem_ops/include"
   "/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/boot_stage2/include"
+  "/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/include"
+  "/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/include"
+  "/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_pwm/include"
+  "/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/include"
   )
 
 # The set of dependency files which are needed:
@@ -121,11 +127,14 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/user/git/PicoTelegraphDisplay/pico-sdk/src/common/pico_util/datetime.c" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/common/pico_util/datetime.c.obj" "gcc" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/common/pico_util/datetime.c.obj.d"
   "/home/user/git/PicoTelegraphDisplay/pico-sdk/src/common/pico_util/pheap.c" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/common/pico_util/pheap.c.obj" "gcc" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/common/pico_util/pheap.c.obj.d"
   "/home/user/git/PicoTelegraphDisplay/pico-sdk/src/common/pico_util/queue.c" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/common/pico_util/queue.c.obj" "gcc" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/common/pico_util/queue.c.obj.d"
+  "/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj" "gcc" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj.d"
   "/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_claim/claim.c" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj" "gcc" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj.d"
   "/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_clocks/clocks.c" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj" "gcc" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj.d"
   "/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_gpio/gpio.c" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj" "gcc" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj.d"
+  "/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj" "gcc" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj.d"
   "/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_irq/irq.c" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj" "gcc" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj.d"
   "/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_pll/pll.c" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj" "gcc" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj.d"
+  "/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj" "gcc" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj.d"
   "/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_sync/sync.c" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj" "gcc" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj.d"
   "/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_timer/timer.c" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj" "gcc" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj.d"
   "/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_uart/uart.c" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj" "gcc" "CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj.d"
@@ -150,6 +159,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/user/git/PicoTelegraphDisplay/DisplayProject/build/lib/OLED/CMakeFiles/OLED.dir/DependInfo.cmake"
+  "/home/user/git/PicoTelegraphDisplay/DisplayProject/build/lib/Config/CMakeFiles/Config.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

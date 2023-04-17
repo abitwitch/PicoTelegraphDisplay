@@ -165,3 +165,9 @@
 /home/user/git/PicoTelegraphDisplay/DisplayProject/build/pico-sdk/src/rp2040/hardware_structs/CMakeFiles/rebuild_cache.dir
 /home/user/git/PicoTelegraphDisplay/DisplayProject/build/pico-sdk/docs/CMakeFiles/edit_cache.dir
 /home/user/git/PicoTelegraphDisplay/DisplayProject/build/pico-sdk/docs/CMakeFiles/rebuild_cache.dir
+/home/user/git/PicoTelegraphDisplay/DisplayProject/build/lib/Config/CMakeFiles/Config.dir
+/home/user/git/PicoTelegraphDisplay/DisplayProject/build/lib/Config/CMakeFiles/edit_cache.dir
+/home/user/git/PicoTelegraphDisplay/DisplayProject/build/lib/Config/CMakeFiles/rebuild_cache.dir
+/home/user/git/PicoTelegraphDisplay/DisplayProject/build/lib/OLED/CMakeFiles/OLED.dir
+/home/user/git/PicoTelegraphDisplay/DisplayProject/build/lib/OLED/CMakeFiles/edit_cache.dir
+/home/user/git/PicoTelegraphDisplay/DisplayProject/build/lib/OLED/CMakeFiles/rebuild_cache.dir

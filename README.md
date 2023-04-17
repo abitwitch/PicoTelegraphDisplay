@@ -20,3 +20,11 @@ This should not need to be performed again, but is included for reference.
     5. Project Name: "DisplayProject", Location: top folder for this repo
     6. Click OK, then OK
 
+## Build project
+1. `cd DisplayProject/build`
+2. `cmake ..`
+3. `make`
+
+## Install on Pico
+1. Copy ./DisplayProject/build/DisplayProject.uf2 to the Pico
+

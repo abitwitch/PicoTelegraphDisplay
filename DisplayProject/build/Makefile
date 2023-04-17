@@ -207,6 +207,32 @@ cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build.make pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build
 .PHONY : cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast
 
+#=============================================================================
+# Target rules for targets named Config
+
+# Build rule for target.
+Config: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Config
+.PHONY : Config
+
+# fast build rule for target.
+Config/fast:
+	$(MAKE) $(MAKESILENT) -f lib/Config/CMakeFiles/Config.dir/build.make lib/Config/CMakeFiles/Config.dir/build
+.PHONY : Config/fast
+
+#=============================================================================
+# Target rules for targets named OLED
+
+# Build rule for target.
+OLED: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 OLED
+.PHONY : OLED
+
+# fast build rule for target.
+OLED/fast:
+	$(MAKE) $(MAKESILENT) -f lib/OLED/CMakeFiles/OLED.dir/build.make lib/OLED/CMakeFiles/OLED.dir/build
+.PHONY : OLED/fast
+
 DisplayProject.obj: DisplayProject.c.obj
 .PHONY : DisplayProject.obj
 
@@ -447,6 +473,30 @@ home/user/git/PicoTelegraphDisplay/pico-sdk/src/common/pico_util/queue.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DisplayProject.dir/build.make CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/common/pico_util/queue.c.s
 .PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/common/pico_util/queue.c.s
 
+home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.obj: home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+.PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.obj
+
+# target to build an object file
+home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DisplayProject.dir/build.make CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+.PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+
+home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.i: home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+.PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.i
+
+# target to preprocess a source file
+home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DisplayProject.dir/build.make CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+.PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+
+home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.s: home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+.PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.s
+
+# target to generate assembly for a file
+home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DisplayProject.dir/build.make CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+.PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+
 home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_claim/claim.obj: home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 .PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_claim/claim.obj
 
@@ -527,6 +577,30 @@ home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DisplayProject.dir/build.make CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 .PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
+home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.obj: home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+.PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.obj
+
+# target to build an object file
+home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DisplayProject.dir/build.make CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+.PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+
+home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.i: home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+.PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.i
+
+# target to preprocess a source file
+home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DisplayProject.dir/build.make CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+.PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+
+home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.s: home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
+.PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.s
+
+# target to generate assembly for a file
+home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DisplayProject.dir/build.make CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
+.PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
+
 home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_irq/irq.obj: home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 .PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_irq/irq.obj
 
@@ -582,6 +656,30 @@ home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_pll/pll.s: h
 home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DisplayProject.dir/build.make CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 .PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+
+home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.obj: home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+.PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.obj
+
+# target to build an object file
+home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DisplayProject.dir/build.make CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+.PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+
+home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.i: home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
+.PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.i
+
+# target to preprocess a source file
+home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DisplayProject.dir/build.make CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
+.PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
+
+home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.s: home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
+.PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.s
+
+# target to generate assembly for a file
+home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DisplayProject.dir/build.make CMakeFiles/DisplayProject.dir/home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
+.PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 
 home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_sync/sync.obj: home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 .PHONY : home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_sync/sync.obj
@@ -1148,7 +1246,9 @@ help:
 	@echo "... bs2_default_bin"
 	@echo "... bs2_default_padded_checksummed_asm"
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
+	@echo "... Config"
 	@echo "... DisplayProject"
+	@echo "... OLED"
 	@echo "... bs2_default"
 	@echo "... DisplayProject.obj"
 	@echo "... DisplayProject.i"
@@ -1180,6 +1280,9 @@ help:
 	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/common/pico_util/queue.obj"
 	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/common/pico_util/queue.i"
 	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/common/pico_util/queue.s"
+	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.obj"
+	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.i"
+	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_adc/adc.s"
 	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_claim/claim.obj"
 	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_claim/claim.i"
 	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_claim/claim.s"
@@ -1190,6 +1293,9 @@ help:
 	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj"
 	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_gpio/gpio.i"
 	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_gpio/gpio.s"
+	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.obj"
+	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.i"
+	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_i2c/i2c.s"
 	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_irq/irq.obj"
 	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_irq/irq.i"
 	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_irq/irq.s"
@@ -1197,6 +1303,9 @@ help:
 	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_pll/pll.obj"
 	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_pll/pll.i"
 	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_pll/pll.s"
+	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.obj"
+	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.i"
+	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_spi/spi.s"
 	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_sync/sync.obj"
 	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_sync/sync.i"
 	@echo "... home/user/git/PicoTelegraphDisplay/pico-sdk/src/rp2_common/hardware_sync/sync.s"
