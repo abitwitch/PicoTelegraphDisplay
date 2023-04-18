@@ -25,9 +25,11 @@ pico_sdk_init()
 
 add_subdirectory(lib/Config)
 add_subdirectory(lib/OLED)
+add_subdirectory(lib/UPS)
 
 include_directories(./lib/Config)
 include_directories(./lib/OLED)
+include_directories(./lib/UPS)
 
 # Add executable. Default name is the project name, version 0.1
 
@@ -47,7 +49,8 @@ target_link_libraries(DisplayProject
         hardware_pwm
         hardware_adc
         OLED
-        Config)
+        Config
+        UPS)
 
 # Add the standard include files to the build
 target_include_directories(DisplayProject PRIVATE

@@ -2,6 +2,7 @@
 #include "pico/stdlib.h"
 #include "lib/OLED/OLED_2in23.h"
 #include "lib/Config/DEV_Config.h"
+#include "lib/UPS/Pico_UPS.h"
 
 
 
@@ -23,26 +24,26 @@ int main()
 
 
     OLED_2in23_Init(); 
-    // printf("OELD_test Demo\r\n");
-    // if(DEV_Module_Init()!=0){
-    //     while(1){
-    //         printf("END\r\n");
-    //     }
-    // }
-    // UBYTE *BlackImage;
-    // OLED_2in23_draw_bitmap(0,0,&BlackImage[0],128,32); 
-    // OLED_2in23_draw_point(10,10,1);
+    getPercent();
+
     OLED_2in23_draw_point(1,5,1);
-    DEV_Delay_ms(100);
+    OLED_2in23_draw_point(1,6,1);
     OLED_2in23_refresh_gram();  
-    OLED_2in23_draw_point(1,5,1);
-    DEV_Delay_ms(1500);
-    OLED_2in23_refresh_gram();  
+    OLED_2in23_draw_point(5,1,1);
+    OLED_2in23_refresh_gram();
+    
 
 
     while (true){
+        int pct=(int)(getPercent());
+        OLED_2in23_draw_point(pct,1,1);
+        OLED_2in23_draw_point(1,1,1);
+        OLED_2in23_refresh_gram(); 
         gpio_put(LED_PIN,1);
         sleep_ms(300);
+        OLED_2in23_draw_point(1,1,0);
+        OLED_2in23_draw_point(pct,1,0);
+        OLED_2in23_refresh_gram(); 
         gpio_put(LED_PIN,0);
         sleep_ms(300);
     }
