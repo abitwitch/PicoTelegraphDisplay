@@ -1,3 +1,5 @@
+> DEPRICATED: This repository is incomplete and depricated. Implimenting USB hosting for the Raspberry Pi Pico was not ideal, so I decided to use a [Raspberry Pi Zero instead](https://github.com/abitwitch/PiTelegraphDisplay).
+
 # PicoTelegraphDisplay
 A small display unit for a keyboard input. It is specifically designed to pair with the PicoTelegraphKey Repo. 
 
