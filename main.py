@@ -117,15 +117,16 @@ def updateTeleDisplay():
     line1=line1[0:-2]
     line1+=str(getBatteryPct())
     #line 2
-    fromIndex=max(0,index-lineLength)
-    toIndex=min(len(text)-1,index+lineLength)
+    fromIndex=max(0,index-int(lineLength/2))
+    toIndex=min(len(text)-1,index+lineLength) #to index is grabs too much, but it'll get cut off by the screen anyway
     line2=text[fromIndex:toIndex]
-    #line2=" "*max(0,lineLength-len(line2))+line2
+    line2=" "*max(0,int(lineLength/2)-index)+line2
     #line3
-    if index < lineLength/2:
-        line3=" "*index
-    else:
-        line3=" "*int(lineLength/2)
+    #if index < lineLength/2:
+    #    line3=" "*index
+    #else:
+    #    line3=" "*int(lineLength/2)
+    line3=" "*int(lineLength/2)
     line3+="^"
     #lines to display
     print(line1+"\n"+line2+"\n"+line3)
@@ -160,6 +161,91 @@ def initTeleDisplay():
 def main():
     global state, duration, prevTimeStamp, seq, prevState
     initTeleDisplay()
+    
+    seq="-.--"
+    send()
+    time.sleep(0.1)
+    seq="---"
+    send()
+    time.sleep(0.1)
+    seq="..-"
+    send()
+    time.sleep(0.1)
+    seq="..--"
+    send()
+    time.sleep(0.1)
+    seq=".--"
+    send()
+    time.sleep(0.1)
+    seq="---"
+    send()
+    time.sleep(0.1)
+    seq=".."
+    send()
+    time.sleep(0.1)
+    seq=".-.."
+    send()
+    time.sleep(0.1)
+    seq=".-.."
+    send()
+    time.sleep(0.1)
+    seq="..--"
+    send()
+    time.sleep(0.1)
+    seq=".-."
+    send()
+    time.sleep(0.1)
+    seq="."
+    send()
+    time.sleep(0.1)
+    seq=".---"
+    send()
+    time.sleep(0.1)
+    seq="---"
+    send()
+    time.sleep(0.1)
+    seq=".."
+    send()
+    time.sleep(0.1)
+    seq="-.-."
+    send()
+    time.sleep(0.1)
+    seq="."
+    send()
+    time.sleep(0.1)
+    seq="..--"
+    send()
+    time.sleep(0.1)
+    seq="-"
+    send()
+    time.sleep(0.1)
+    seq="---"
+    send()
+    time.sleep(0.1)
+    seq="."
+    send()
+    time.sleep(0.1)
+    seq="..--"
+    send()
+    time.sleep(0.1)
+    seq="...."
+    send()
+    time.sleep(0.1)
+    seq="."
+    send()
+    time.sleep(0.1)
+    seq="."
+    send()
+    time.sleep(0.1)
+    seq="."
+    send()
+    time.sleep(0.1)
+    seq="."
+    send()
+    time.sleep(0.1)
+    
+    
+    
     while True:
         state=key.value()
         if state != prevState:
