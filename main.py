@@ -6,10 +6,12 @@ import ina219
 import sys
 import time
 import machine
+import random
+import os
 
 
 #Telegraph display vars
-#modes: 0-just type, 1-practice alpha, 2-practice digits, 3-practice alphanum, 4-practice symbols, 5-practice all
+#modes: 0-just type, 1-sample text, 2-practice alpha, 3-practice digits, 4-practice alphanum, 5-practice symbols, 6-practice all
 mode=1
 userInput=""
 streak=0
@@ -33,6 +35,8 @@ morseCodeHints = {'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F'
     }
 morseCode = {v: k for k, v in morseCodeHints.items()}
 
+charSwapsForText={"—":"-", "‘": "'","’": "'", "“": "\"", "”": "\""}
+charSwapsForDisplayOnly={"\n":"|"}
 
 
 def calcDah(duration):
@@ -85,8 +89,6 @@ def send():
     updateTeleDisplay()
     
 
-
-
 def getBatteryPct():
     bus_voltage = battery.getBusVoltage_V()
     pct = (bus_voltage -3)/1.2*100
@@ -98,8 +100,12 @@ def getBatteryPct():
 
 
 def loadText():
-    with open("sample.txt", "r") as f:
+    targetFile=random.choice(os.listdir("./SampleText/Frankenstein-MaryShelley"))
+    print(targetFile)
+    with open(f"./SampleText/Frankenstein-MaryShelley/{targetFile}", "r") as f:
         text=f.read()
+    for key in charSwapsForText.keys():
+      text = text.replace(key, charSwapsForText[key])
     return(text)
 
 def updateTeleDisplay():
@@ -110,7 +116,10 @@ def updateTeleDisplay():
     else:
         if streak==0:
             #show hint
-            line1="hint: "+morseCodeHints[text[index].upper()]
+            if text[index].upper() in morseCodeHints:
+                line1="hint: "+morseCodeHints[text[index].upper()]
+            else:
+                line1="? char: ."
         else:
             line1="streak: "+str(streak)
     line1=line1+" "*max(0,lineLength-len(line1))
@@ -118,14 +127,12 @@ def updateTeleDisplay():
     line1+=str(getBatteryPct())
     #line 2
     fromIndex=max(0,index-int(lineLength/2))
-    toIndex=min(len(text)-1,index+lineLength) #to index is grabs too much, but it'll get cut off by the screen anyway
+    toIndex=min(len(text),index+lineLength) #to index is grabs too much, but it'll get cut off by the screen anyway
     line2=text[fromIndex:toIndex]
     line2=" "*max(0,int(lineLength/2)-index)+line2
+    for key in charSwapsForDisplayOnly.keys():
+      line2 = line2.replace(key, charSwapsForDisplayOnly[key])
     #line3
-    #if index < lineLength/2:
-    #    line3=" "*index
-    #else:
-    #    line3=" "*int(lineLength/2)
     line3=" "*int(lineLength/2)
     line3+="^"
     #lines to display
@@ -146,15 +153,17 @@ def updateVals():
             index+=1
             text+=userInput
     else:
-        if text[index].upper()==userInput.upper():
+        if text[index].upper()==userInput.upper() or (text[index].upper() not in morseCodeHints and userInput.upper()=="E"):
             streak+=1
             index+=1
         else:
             streak=0 
 
 def initTeleDisplay():
-    global text
+    global text, index
     text=loadText()
+    if mode==1:
+        index=random.randint(0,len(text)-1)
     updateTeleDisplay()
     
 
