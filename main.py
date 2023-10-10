@@ -11,8 +11,8 @@ import os
 
 
 #Telegraph display vars
-#modes: 0-just type, 1-sample text, 2-practice alpha, 3-practice digits, 4-practice alphanum, 5-practice symbols, 6-practice all
-mode=1
+#modes: 0-menu, 1-just type, 2-sample text, 3-practice alpha, 4-practice digits, 5-practice symbols, 6-practice mistakes
+mode=2
 userInput=""
 streak=0
 index=0
@@ -26,6 +26,7 @@ useLed=True
 farns=2 #Farnsworth speed factor (1 = no farnsworth)
 noiceDuration=0.01 #signals (dits) less than this are ignored
 dahFilePath="/storedDahTiming"
+mistakesFilePath="/mistakes"
 key = machine.Pin(21, machine.Pin.IN, machine.Pin.PULL_DOWN)
 
 
@@ -61,6 +62,16 @@ def loadDah():
     except:
         return 1.5
 
+def addToMistakeFile(character):
+    try:
+        with open(mistakesFilePath, "r") as mistakesFile:
+            mistakesText=mistakesFile.read()[:99]
+    except:
+        mistakesText=""
+    with open(mistakesFilePath, "w") as mistakesFile:
+        mistakesFile.write(str(mistakesText+character))
+        mistakesFile.flush()
+
 #Telegraph key vars
 seq=""
 shift=False
@@ -74,7 +85,9 @@ prevTimeStamp=time.ticks_ms()/1000
 def send():
     global seq, shift
     global userInput
-    if seq not in morseCode:
+    if seq=='....-.':
+        userInput="<" #End of work
+    elif seq not in morseCode:
         print(f"Error: Unknown character ({seq}).")
         userInput=chr(21)
     elif seq=='....-.':
@@ -108,12 +121,25 @@ def loadText():
       text = text.replace(key, charSwapsForText[key])
     return(text)
 
+def loadMistakesText():
+    try:
+        with open(mistakesFilePath, "r") as f:
+            text=f.read()
+    except:
+        text="".join(morseCodeHints.keys())
+    text*=3
+    text=''.join(random.sample(text,len(text)))
+    return(text)
+
 def updateTeleDisplay():
     updateVals()
     #line 1
     if mode==0:
-        line1=""
-    else:
+        line1="- type | -. 123"
+        line2=". text | .. .!?"
+        line3=".- abc | -- errs"
+    elif mode not in [0,1]:
+        #line 1
         if streak==0:
             #show hint
             if text[index].upper() in morseCodeHints:
@@ -122,19 +148,21 @@ def updateTeleDisplay():
                 line1="? char: ."
         else:
             line1="streak: "+str(streak)
-    line1=line1+" "*max(0,lineLength-len(line1))
-    line1=line1[0:-2]
-    line1+=str(getBatteryPct())
-    #line 2
-    fromIndex=max(0,index-int(lineLength/2))
-    toIndex=min(len(text),index+lineLength) #to index is grabs too much, but it'll get cut off by the screen anyway
-    line2=text[fromIndex:toIndex]
-    line2=" "*max(0,int(lineLength/2)-index)+line2
-    for key in charSwapsForDisplayOnly.keys():
-      line2 = line2.replace(key, charSwapsForDisplayOnly[key])
-    #line3
-    line3=" "*int(lineLength/2)
-    line3+="^"
+        line1=line1+" "*max(0,lineLength-len(line1))
+        line1=line1[0:-2]
+        line1+=str(getBatteryPct())
+        #line 2
+        fromIndex=max(0,index-int(lineLength/2))
+        toIndex=min(len(text),index+lineLength) #to index is grabs too much, but it'll get cut off by the screen anyway
+        line2=text[fromIndex:toIndex]
+        line2=" "*max(0,int(lineLength/2)-index)+line2
+        for key in charSwapsForDisplayOnly.keys():
+            line2 = line2.replace(key, charSwapsForDisplayOnly[key])
+    if mode!=0:
+        #line3
+        line3="<....-."
+        line3+=" "*(int(lineLength/2)-len(line3))
+        line3+="^"
     #lines to display
     print(line1+"\n"+line2+"\n"+line3)
     screen.writeLines(line1,line2,line3)
@@ -144,7 +172,23 @@ def updateVals():
     global index
     global text
     global streak
+    global mode
     if mode==0:
+        if userInput.upper()=="T":
+            mode=1
+        if userInput.upper()=="E":
+            mode=2
+        if userInput.upper()=="A":
+            mode=3
+        if userInput.upper()=="N":
+            mode=4
+        if userInput.upper()=="I":
+            mode=5
+        if userInput.upper()=="M":
+            mode=6
+        if userInput.upper() in "TEANIM":
+            initTeleDisplay()
+    elif mode==1:
         if userInput=="\b":
             #backspace
             index-=1
@@ -153,16 +197,38 @@ def updateVals():
             index+=1
             text+=userInput
     else:
-        if text[index].upper()==userInput.upper() or (text[index].upper() not in morseCodeHints and userInput.upper()=="E"):
+        if userInput=="<":
+            mode=0
+        elif text[index].upper()==userInput.upper() or (text[index].upper() not in morseCodeHints and userInput.upper()=="E"):
             streak+=1
             index+=1
         else:
-            streak=0 
+            streak=0
+            addToMistakeFile(text[index])
 
 def initTeleDisplay():
     global text, index
-    text=loadText()
-    if mode==1:
+    if mode==0:
+        pass#TODO
+    elif mode==1:
+        pass#TODO
+    else:
+        if mode==2:
+            text=loadText()
+        if mode==3:
+            text="abcdefghijklmnopqrstuvwxyz"
+            text*=10
+            text="".join(random.sample(text,len(text)))            
+        if mode==4:
+            text="0123456789"
+            text*=20
+            text="".join(random.sample(text,len(text)))
+        if mode==5:
+            text="&'@():,=!.-%+\"?/\\ "
+            text*=10
+            text="".join(random.sample(text,len(text)))
+        if mode==6:
+            text=loadMistakesText()
         index=random.randint(0,len(text)-1)
     updateTeleDisplay()
     
