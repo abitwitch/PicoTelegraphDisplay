@@ -245,7 +245,7 @@ def initTeleDisplay():
         if mode==4:
             sourceText="0123456789"
         if mode==5:
-            sourceText="&'@():,=!.-%+\"?/\\ "
+            sourceText="&'@():,=!.-+\"?/\\ "
         if mode==6:
             sourceText=loadMistakesText()
         if mode in [3,4,5,6]:
