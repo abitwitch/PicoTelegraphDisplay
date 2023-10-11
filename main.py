@@ -12,7 +12,7 @@ import os
 
 #Telegraph display vars
 #modes: 0-menu, 1-just type, 2-sample text, 3-practice alpha, 4-practice digits, 5-practice symbols, 6-practice mistakes
-mode=2
+mode=1
 userInput=""
 streak=0
 index=0
@@ -20,6 +20,7 @@ text=""
 screen = PicoOLED.OLED_2inch23()
 battery = ina219.INA219(addr=0x43)
 lineLength=16
+targetTextLength=1000 #for non-sampled text
 
 #Telegraph key Config
 useLed=True
@@ -27,6 +28,7 @@ farns=2 #Farnsworth speed factor (1 = no farnsworth)
 noiceDuration=0.01 #signals (dits) less than this are ignored
 dahFilePath="/storedDahTiming"
 mistakesFilePath="/mistakes"
+modeFilePath="/mode"
 key = machine.Pin(21, machine.Pin.IN, machine.Pin.PULL_DOWN)
 
 
@@ -61,6 +63,18 @@ def loadDah():
             return float(dahFile.read())
     except:
         return 1.5
+
+def saveMode():
+    with open(modeFilePath, "w") as modeFile:
+        modeFile.write(str(mode))
+        modeFile.flush()
+    
+def loadMode():
+    try:
+        with open(modeFilePath, "r") as modeFile:
+            return int(modeFile.read())
+    except:
+        return 1
 
 def addToMistakeFile(character):
     try:
@@ -127,8 +141,8 @@ def loadMistakesText():
             text=f.read()
     except:
         text="".join(morseCodeHints.keys())
-    text*=3
-    text=''.join(random.sample(text,len(text)))
+    if len(text)==0:
+        text="".join(morseCodeHints.keys())
     return(text)
 
 def updateTeleDisplay():
@@ -138,7 +152,14 @@ def updateTeleDisplay():
         line1="- type | -. 123"
         line2=". text | .. .!?"
         line3=".- abc | -- errs"
-    elif mode not in [0,1]:
+    elif mode==1:
+        line1=" "*lineLength
+        line1=line1[0:-2]
+        line1+=str(getBatteryPct())
+        line2=" "*(int(lineLength/2)-len(text)+1)
+        line2+=text[max(0,len(text)-int(lineLength/2)-1):]
+        print("{"+line2+"}")
+    else:
         #line 1
         if streak==0:
             #show hint
@@ -187,8 +208,11 @@ def updateVals():
         if userInput.upper()=="M":
             mode=6
         if userInput.upper() in "TEANIM":
+            saveMode()
             initTeleDisplay()
     elif mode==1:
+        if userInput=="<":
+            mode=0
         if userInput=="\b":
             #backspace
             index-=1
@@ -207,34 +231,34 @@ def updateVals():
             addToMistakeFile(text[index])
 
 def initTeleDisplay():
-    global text, index
+    global text, index, userInput
     if mode==0:
-        pass#TODO
+        pass
     elif mode==1:
-        pass#TODO
+        text=""
+        userInput=""
     else:
         if mode==2:
             text=loadText()
         if mode==3:
-            text="abcdefghijklmnopqrstuvwxyz"
-            text*=10
-            text="".join(random.sample(text,len(text)))            
+            sourceText="abcdefghijklmnopqrstuvwxyz"        
         if mode==4:
-            text="0123456789"
-            text*=20
-            text="".join(random.sample(text,len(text)))
+            sourceText="0123456789"
         if mode==5:
-            text="&'@():,=!.-%+\"?/\\ "
-            text*=10
-            text="".join(random.sample(text,len(text)))
+            sourceText="&'@():,=!.-%+\"?/\\ "
         if mode==6:
-            text=loadMistakesText()
+            sourceText=loadMistakesText()
+        if mode in [3,4,5,6]:
+            text=""
+            while len(text)<targetTextLength:
+                text+=random.choice(sourceText)
         index=random.randint(0,len(text)-1)
     updateTeleDisplay()
     
 
 def main():
-    global state, duration, prevTimeStamp, seq, prevState
+    global state, duration, prevTimeStamp, seq, prevState, mode
+    mode=loadMode()
     initTeleDisplay()
     while True:
         state=key.value()
