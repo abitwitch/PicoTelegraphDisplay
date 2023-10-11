@@ -1,32 +1,17 @@
-> DEPRICATED: This repository is incomplete and depricated. Implimenting USB hosting for the Raspberry Pi Pico was not ideal, so I decided to use a [Raspberry Pi Zero instead](https://github.com/abitwitch/PiTelegraphDisplay).
-
 # PicoTelegraphDisplay
 A small display unit for a keyboard input. It is specifically designed to pair with the PicoTelegraphKey Repo. 
 
-## Building the initial project
-> This should not need to be performed again, but is included for reference. 
-1. `git clone https://github.com/raspberrypi/pico-project-generator`
-2. `cd pico-project-generator`
-3. `export PICO_SDK_PATH=/home/user/git/PicoTelegraphDisplay/pico-sdk` (or whereever the SDK is located)
-4. `./pico_project.py --gui`
-5. Project Name: "DisplayProject", Location: top folder for this repo
-6. Click OK, then OK
+## Hardware Setup
+This project uses
+- A Raspberry Pi Pico
+- Waveshare Display: 2.23inch OLED Display Module for Raspberry Pi Pico (SKU 19750)
+- Waveshare UPS: UPS Module for Raspberry Pi Pico, Uninterruptible Power Supply, Li-po Battery, Stackable Design (SKU 20121)
+- A Telegraph key of your choosing connected to the 3V3(OUT) and Pin GP21 of the Pico
 
-## Set up environment 
-1. Install Pico C SDK
-    1. `git clone https://github.com/raspberrypi/pico-sdk.git`
-    2. `cd pico-sdk`
-    3. `git submodule update --init`
-    4. `cd ..`
-2. Install Toolset
-    1. `sudo apt update`
-    2. `sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential`
-
-## Build project
-1. `cd DisplayProject/build`
-2. `cmake ..`
-3. `make`
-
-## Install on Pico
-1. Copy ./DisplayProject/build/DisplayProject.uf2 to the Pico
+## Setup
+1) Download and install Thonny `sudo apt install thonny`
+2) Open Thonny with `sudo thonny`
+3) Install MicroPython for the Pico by using the language selector at the bottom left of the thonny window
+4) Prepare to upload files ("View" > "Files")
+5) Navigate to this repo. Upload the "main.py", and the following folders (and all files in them); "Battery", "SampleText" and "Screen" to the Raspberry Pi Pico
 
